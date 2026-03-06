@@ -1,0 +1,273 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
+            z-index: 1000;
+            transition: background-color 0.4s;
+        }
+
+        .header.scrolled {
+            background-color: #141414;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #e50914;
+            font-size: 32px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #b3b3b3;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-icon, .profile-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/BACKGROUND_IMG.avif);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+        }
+
+        .hero-content {
+            max-width: 500px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-description {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            line-height: 1.4;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-play {
+            background-color: white;
+            color: black;
+        }
+
+        .btn-play:hover {
+            background-color: rgba(255,255,255,0.75);
+        }
+
+        .btn-info {
+            background-color: rgba(109,109,110,0.7);
+            color: white;
+        }
+
+        .btn-info:hover {
+            background-color: rgba(109,109,110,0.4);
+        }
+
+        .content {
+            padding: 0 50px;
+            margin-top: -100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .row {
+            margin-bottom: 40px;
+        }
+
+        .row-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #e5e5e5;
+        }
+
+        .row-posters {
+            display: flex;
+            gap: 8px;
+            overflow-x: scroll;
+            padding: 10px 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .row-posters::-webkit-scrollbar {
+            display: none;
+        }
+
+        .poster {
+            min-width: 200px;
+            height: 300px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .poster:hover {
+            transform: scale(1.08);
+        }
+
+        .poster-large {
+            height: 280px;
+        }
+
+        .poster-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 20px 10px 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .poster-1 { background-image: url(../img/wednesday.jpg); }
+        .poster-2 { background-image: url(../img/crown.jpg); }
+        .poster-3 { background-image: url(../img/ozark.jpeg); }
+        .poster-4 { background-image: url(../img/moneyheist.jpg); }
+        .poster-5 { background-image: url(../img/squidgame.jpg); }
+        .poster-6 { background-image: url(../img/dark.jpg); }
+        .poster-7 { background-image: url(../img/bridgerton.jpeg); }
+
+        .poster-8 { background-image: url(../img/thewitcher.jpeg); }
+        .poster-9 { background-image: url(../img/thehouseofcards.jpeg); }
+        .poster-10 { background-image: url(../img/theorangeblack.jpeg); }
+        .poster-11 { background-image: url(../img/narcos.jpg); }
+        .poster-12 { background-image: url(../img/blackmirror.jpg); }
+        .poster-13 { background-image: url(../img/theumbrellaacademy.jpeg); }
+        .poster-14 { background-image: url(../img/mindhunter.jpeg); }
+        .poster-15 { background-image: url(../img/russiandoll.jpeg); }
+
+        .poster-16 { background-image: url(../img/extraction.jpeg); }
+        .poster-17 { background-image: url(../img/theoldguard.jpg); }
+        .poster-18 { background-image: url(../img/6underground.jpg); }
+        .poster-19 { background-image: url(../img/triplefrontier.jpg); }
+        .poster-20 { background-image: url(../img/birdbox.jpeg); }
+        .poster-21 { background-image: url(../img/the\ platform.jpg); }
+        .poster-22 { background-image: url(../img/armyofthedead.jpg); }
+        .poster-23 { background-image: url(../img/rednotice.jpg); }
+
+        .poster-24 { background-image: url(../img/thegoodplace.jpeg); }
+        .poster-25 { background-image: url(../img/spaceforce.jpeg); }
+        .poster-26 { background-image: url(../img/deadtome.jpeg); }
+        .poster-27 { background-image: url(../img/schittscreek.jpeg); }
+        .poster-28 { background-image: url(../img/gracefrankie.jpeg); }
+        .poster-29 { background-image: url(../img/theoffice.jpg); }
+        .poster-30 { background-image: url(../img/friends.jpeg); }
+        .poster-31 { background-image: url(../img/brooklynninenine.jpeg); }
+        
+        .poster-32 { background-image: url(../img/thehauntingofhillhouse2.jpeg); }
+        .poster-33 { background-image: url(../img/geraldsgame.jpeg); }
+        .poster-34 { background-image: url(../img/cam.jpeg); }
+        .poster-35 { background-image: url(../img/theritual.jpeg); }
+        .poster-36 { background-image: url(../img/cargo.jpeg); }
+        .poster-37 { background-image: url(../img/theperfection.jpeg); }
+        .poster-38 { background-image: url(../img/hishouse.jpeg); }
+        .poster-39 { background-image: url(../img/fearstreet.jpeg); }
+        
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-left: 20px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+            }
+
+            .content {
+                padding: 0 20px;
+            }
+
+            .poster {
+                min-width: 150px;
+                height: 225px;
+            }
+        }
+    
